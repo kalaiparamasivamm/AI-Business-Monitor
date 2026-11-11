@@ -1,0 +1,1481 @@
+
+/* =========================================================
+   REPORTS PAGE
+========================================================= */
+
+.reports-page {
+  padding: 28px;
+  min-height: 100vh;
+  background: #f7fafb;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.reports-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reports-title-row svg {
+  font-size: 28px;
+}
+
+.reports-title-row h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.reports-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reports-actions button {
+  border: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.reports-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.reports-actions button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.report-refresh-btn {
+  background: white;
+  border: 1px solid #e5e7eb !important;
+  color: #374151;
+}
+
+.report-refresh-btn:hover {
+  background: #f9fafb;
+}
+
+.report-print-btn {
+  background: #111827;
+  color: white;
+}
+
+.report-print-btn:hover {
+  background: #1f2937;
+}
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.report-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.report-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f2f4;
+}
+
+.report-card-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  background: #f3f4f6;
+}
+
+.report-card span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.report-card h2 {
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.report-card small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.report-card small svg {
+  margin-right: 4px;
+}
+
+.sales-card .report-card-icon {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.expense-card .report-card-icon {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.profit-card .report-card-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.health-card-report .report-card-icon {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.positive {
+  color: #15803d;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+/* =========================================================
+   COMMON REPORT SECTIONS
+========================================================= */
+
+.report-section,
+.report-chart-card,
+.ai-report-card,
+.risk-report-card,
+.prediction-report-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f2f4;
+}
+
+.report-section {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-heading > svg {
+  font-size: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.section-heading p,
+.chart-heading p,
+.ai-report-header p,
+.risk-heading p {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+/* =========================================================
+   BUSINESS OVERVIEW
+========================================================= */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.overview-box {
+  padding: 18px;
+  border: 1px solid #edf0f2;
+  border-radius: 12px;
+  background: #fafbfc;
+}
+
+.overview-box span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.overview-box strong {
+  font-size: 23px;
+}
+
+.warning-number {
+  color: #d97706;
+}
+
+.danger-number {
+  color: #dc2626;
+}
+
+/* =========================================================
+   CHARTS
+========================================================= */
+
+.report-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chart-heading h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.chart-heading svg {
+  font-size: 22px;
+}
+
+.empty-chart {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* =========================================================
+   AI REPORTS
+========================================================= */
+
+.ai-report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.ai-report-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.ai-report-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.ai-icon,
+.prediction-icon,
+.final-insight-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  font-size: 20px;
+}
+
+.ai-icon {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.status-badge,
+.risk-badge {
+  margin-left: auto;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.excellent,
+.good,
+.low {
+  color: #15803d;
+}
+
+.attention,
+.medium {
+  color: #b45309;
+}
+
+.critical,
+.high {
+  color: #dc2626;
+}
+
+/* =========================================================
+   DIAGNOSIS / RECOMMENDATIONS
+========================================================= */
+
+.diagnosis-list,
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.diagnosis-item,
+.recommendation-item,
+.risk-factor {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.diagnosis-item svg,
+.risk-factor svg,
+.recommendation-item svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.diagnosis-item svg,
+.risk-factor svg {
+  color: #dc2626;
+}
+
+.recommendation-item svg {
+  color: #15803d;
+}
+
+.healthy-message,
+.no-risk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* =========================================================
+   RISK + PREDICTION
+========================================================= */
+
+.risk-prediction-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.risk-heading,
+.prediction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 19px;
+}
+
+.risk-heading h2 svg {
+  font-size: 18px;
+}
+
+.risk-score-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.risk-circle {
+  width: 135px;
+  height: 135px;
+  min-width: 135px;
+  border-radius: 50%;
+  border: 10px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-circle strong {
+  font-size: 34px;
+}
+
+.risk-circle span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.risk-circle.high {
+  border-color: #dc2626;
+}
+
+.risk-circle.medium {
+  border-color: #d97706;
+}
+
+.risk-circle.low {
+  border-color: #16a34a;
+}
+
+.risk-score-container h3 {
+  margin: 0 0 7px;
+}
+
+.risk-score-container p {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.risk-factors h3 {
+  margin: 0 0 12px;
+}
+
+.prediction-header {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.prediction-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.prediction-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.prediction-value {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 35px 0 10px;
+}
+
+.prediction-description {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.prediction-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 11px;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+/* =========================================================
+   AI PROFIT LEAKAGE REPORT
+========================================================= */
+
+.profit-leakage-report {
+  margin-top: 28px;
+}
+
+/* =========================================================
+   LEAKAGE SUMMARY
+========================================================= */
+
+.leakage-report-summary {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.leakage-score-box {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.leakage-circle {
+  width: 105px;
+  height: 105px;
+  min-width: 105px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #e5e7eb;
+}
+
+.leakage-circle strong {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.leakage-circle span {
+  font-size: 12px;
+  color: #667085;
+  margin-top: 5px;
+}
+
+.leakage-circle.high {
+  border-color: #ef4444;
+}
+
+.leakage-circle.medium {
+  border-color: #f59e0b;
+}
+
+.leakage-circle.low {
+  border-color: #22c55e;
+}
+
+.leakage-score-box > div:last-child > span {
+  color: #667085;
+  font-size: 14px;
+}
+
+.leakage-score-box h3 {
+  margin: 7px 0 0;
+  font-size: 20px;
+}
+
+.leakage-score-box h3.high {
+  color: #dc2626;
+}
+
+.leakage-score-box h3.medium {
+  color: #d97706;
+}
+
+.leakage-score-box h3.low {
+  color: #16a34a;
+}
+
+/* =========================================================
+   LEAKAGE FINANCIAL BOX
+========================================================= */
+
+.leakage-financial-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.leakage-financial-box > div {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leakage-financial-box span {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.leakage-financial-box strong {
+  font-size: 22px;
+}
+
+.leakage-financial-box strong.negative {
+  color: #dc2626;
+}
+
+.leakage-financial-box strong.positive {
+  color: #16a34a;
+}
+
+/* =========================================================
+   LEAKAGE MESSAGE
+========================================================= */
+
+.leakage-message {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.leakage-message.high {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.leakage-message.medium {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.leakage-message.low {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.leakage-message svg {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   LEAKAGE AREAS
+========================================================= */
+
+.leakage-area-section {
+  margin-top: 28px;
+}
+
+.leakage-area-section h3,
+.top-expenses-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+
+.leakage-area-section h3 svg,
+.top-expenses-section h3 svg {
+  font-size: 16px;
+}
+
+.leakage-area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.leakage-area-card {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.leakage-area-card.high {
+  border-left: 4px solid #ef4444;
+}
+
+.leakage-area-card.medium {
+  border-left: 4px solid #f59e0b;
+}
+
+.leakage-area-card.low {
+  border-left: 4px solid #22c55e;
+}
+
+.leakage-area-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.leakage-area-card.medium .leakage-area-icon {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.leakage-area-card.low .leakage-area-icon {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.leakage-area-card h4 {
+  margin: 0 0 7px;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.leakage-area-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.leakage-area-card span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TOP EXPENSES
+========================================================= */
+
+.top-expenses-section {
+  margin-top: 28px;
+}
+
+.expense-leakage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-leakage-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.expense-leakage-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.expense-leakage-row strong {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.expense-leakage-row > strong {
+  font-size: 16px;
+}
+
+.expense-leakage-row span {
+  font-size: 12px;
+  color: #667085;
+}
+/* =========================================================
+   AI RECOMMENDATION - SAME STYLE AS AI BUSINESS DIAGNOSIS
+========================================================= */
+
+.ai-leakage-recommendation {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: block;
+
+  margin-top: 25px;
+  padding: 22px 24px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Recommendation icon */
+.ai-leakage-recommendation-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  background: #f0fdfa;
+  color: #0f766e;
+
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* Content */
+.ai-leakage-recommendation-content {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Heading */
+.ai-leakage-recommendation-content h3 {
+  display: block;
+
+  margin: 0 0 10px;
+  padding: 0;
+
+  color: #1f2937;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* Recommendation text */
+.ai-leakage-recommendation-content p {
+  display: block;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  color: #374151;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ai-leakage-recommendation {
+    display: block;
+    padding: 18px;
+    margin-top: 20px;
+  }
+
+  .ai-leakage-recommendation-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+  }
+
+  .ai-leakage-recommendation-content h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .ai-leakage-recommendation-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ai-leakage-recommendation {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .ai-leakage-recommendation-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 17px;
+  }
+
+  .ai-leakage-recommendation-content h3 {
+    font-size: 15px;
+  }
+
+  .ai-leakage-recommendation-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+/* =========================================================
+   INVENTORY INSIGHT
+========================================================= */
+
+.inventory-report-insight {
+  margin-top: 28px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+}
+
+.inventory-insight-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.inventory-report-insight h2 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+
+.inventory-report-insight p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.inventory-report-insight strong {
+  color: #1f2937;
+}
+
+/* =========================================================
+   FINAL AI INSIGHT
+========================================================= */
+
+.final-insight {
+  background: #111827;
+  color: white;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.final-insight-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.final-insight h2 {
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+
+.final-insight p {
+  color: #d1d5db;
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.reports-loading,
+.reports-error {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.reports-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #111827;
+  border-radius: 50%;
+  animation: reportSpin 1s linear infinite;
+}
+
+@keyframes reportSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-spin {
+  animation: reportSpin 1s linear infinite;
+}
+
+.reports-error svg {
+  font-size: 35px;
+  color: #dc2626;
+}
+
+.reports-error h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.reports-error button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1100px) {
+  .report-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .report-chart-grid,
+  .ai-report-grid,
+  .risk-prediction-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .leakage-report-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .leakage-area-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .reports-page {
+    padding: 16px;
+  }
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reports-title-row h1 {
+    font-size: 25px;
+  }
+
+  .reports-actions {
+    width: 100%;
+  }
+
+  .reports-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .report-summary-grid,
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-section,
+  .report-chart-card,
+  .ai-report-card,
+  .risk-report-card,
+  .prediction-report-card {
+    padding: 18px;
+  }
+
+  .risk-score-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .leakage-score-box {
+    padding: 18px;
+  }
+
+  .leakage-circle {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    border-width: 6px;
+  }
+
+  .leakage-circle strong {
+    font-size: 24px;
+  }
+
+  .leakage-financial-box {
+    grid-template-columns: 1fr;
+  }
+
+  .leakage-area-card {
+    padding: 16px;
+  }
+
+  .expense-leakage-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inventory-report-insight {
+    padding: 18px;
+  }
+
+  .ai-leakage-recommendation {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .ai-leakage-recommendation-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 18px;
+  }
+
+  .ai-leakage-recommendation-content h3 {
+    font-size: 16px;
+  }
+
+  .ai-leakage-recommendation-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   PRINT REPORT
+========================================================= */
+
+@media print {
+  .reports-actions {
+    display: none !important;
+  }
+
+  .reports-page {
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .report-card,
+  .report-section,
+  .report-chart-card,
+  .ai-report-card,
+  .risk-report-card,
+  .prediction-report-card,
+  .profit-leakage-report,
+  .inventory-report-insight,
+  .final-insight {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .leakage-report-summary {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .leakage-area-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .report-footer {
+    margin-top: 30px;
+  }
+}
+/* =========================================================
+   FINAL TEXT VISIBILITY FIX
+   Prevent global styles from making report text too light
+========================================================= */
+
+.reports-page {
+  color: #1f2937 !important;
+}
+
+/* Main heading */
+.reports-page .reports-title-row h1 {
+  color: #111827 !important;
+}
+
+/* Header subtitle */
+.reports-page .reports-header p {
+  color: #4b5563 !important;
+}
+
+/* Section headings */
+.reports-page .section-heading h2,
+.reports-page .chart-heading h3,
+.reports-page .ai-report-header h2,
+.reports-page .risk-heading h2,
+.reports-page .prediction-header h2,
+.reports-page .leakage-area-section h3,
+.reports-page .top-expenses-section h3 {
+  color: #111827 !important;
+}
+
+/* Summary card labels */
+.reports-page .report-card span {
+  color: #4b5563 !important;
+}
+
+/* Summary card main values */
+.reports-page .report-card h2 {
+  color: #111827 !important;
+}
+
+/* Keep profit red */
+.reports-page .report-card h2.negative,
+.reports-page .negative {
+  color: #dc2626 !important;
+}
+
+/* Keep positive values green */
+.reports-page .positive {
+  color: #15803d !important;
+}
+
+/* Small descriptions */
+.reports-page .report-card small {
+  color: #4b5563 !important;
+}
+
+/* Business overview labels */
+.reports-page .overview-box span {
+  color: #4b5563 !important;
+}
+
+/* Business overview numbers */
+.reports-page .overview-box strong {
+  color: #111827 !important;
+}
+
+/* Warning / danger numbers */
+.reports-page .warning-number {
+  color: #d97706 !important;
+}
+
+.reports-page .danger-number {
+  color: #dc2626 !important;
+}
+
+/* Section descriptions */
+.reports-page .section-heading p,
+.reports-page .chart-heading p,
+.reports-page .ai-report-header p,
+.reports-page .risk-heading p {
+  color: #4b5563 !important;
+}
+
+/* Risk score */
+.reports-page .risk-circle strong {
+  color: #111827 !important;
+}
+
+.reports-page .risk-circle span {
+  color: #4b5563 !important;
+}
+
+.reports-page .risk-score-container h3 {
+  color: #111827 !important;
+}
+
+.reports-page .risk-score-container p {
+  color: #4b5563 !important;
+}
+
+/* Prediction */
+.reports-page .prediction-value {
+  color: #111827 !important;
+}
+
+.reports-page .prediction-description {
+  color: #4b5563 !important;
+}
+
+/* Leakage section */
+.reports-page .leakage-score-box > div:last-child > span {
+  color: #4b5563 !important;
+}
+
+.reports-page .leakage-score-box h3 {
+  color: #111827 !important;
+}
+
+.reports-page .leakage-financial-box span {
+  color: #4b5563 !important;
+}
+
+.reports-page .leakage-financial-box strong {
+  color: #111827 !important;
+}
+
+.reports-page .leakage-area-card h4 {
+  color: #1f2937 !important;
+}
+
+.reports-page .leakage-area-card p {
+  color: #4b5563 !important;
+}
+
+/* Expense rows */
+.reports-page .expense-leakage-row strong {
+  color: #1f2937 !important;
+}
+
+.reports-page .expense-leakage-row span {
+  color: #4b5563 !important;
+}
+
+/* Inventory insight */
+.reports-page .inventory-report-insight h2 {
+  color: #111827 !important;
+}
+
+.reports-page .inventory-report-insight p {
+  color: #4b5563 !important;
+}
+
+.reports-page .inventory-report-insight strong {
+  color: #111827 !important;
+}
+
+/* AI Diagnosis / Recommendation text */
+.reports-page .ai-report-header h2,
+.reports-page .ai-leakage-recommendation-content h3 {
+  color: #111827 !important;
+}
+
+.reports-page .ai-leakage-recommendation-content p {
+  color: #374151 !important;
+}
+
+/* Diagnosis and risk text */
+.reports-page .diagnosis-item,
+.reports-page .recommendation-item,
+.reports-page .risk-factor {
+  color: #374151 !important;
+}
+
+/* Empty chart text */
+.reports-page .empty-chart {
+  color: #6b7280 !important;
+}
+
+/* Footer */
+.reports-page .report-footer {
+  color: #6b7280 !important;
+}
+
+/* Loading / error */
+.reports-page .reports-loading,
+.reports-page .reports-error {
+  color: #1f2937 !important;
+}
+
+.reports-page .reports-error h2 {
+  color: #111827 !important;
+}
